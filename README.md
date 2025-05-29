@@ -221,6 +221,9 @@ For this final "task", please write how you used GenAI for this test, whether yo
 
 TODO Your Text Here.
 
+AI boosts my styling efficiency however the effect is not the same as in my mind. I think AI is constructive in logic design but lack of ART GENE hhh.
+Anyway, feeling AI has becoming more and more powerful.
+
 ## Task Five - Fun with CSS (Also 0%)
 
 If you finish everything else with time to spare, feel free to experiment with use of GenAI to implement non-trivial CSS styling for your app. This is what I came up with in about 20 minutes of playing around:
