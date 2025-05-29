@@ -9,16 +9,40 @@
   justify-content: center;
   padding: 8px;
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slot:hover {
+  border-color: #999;
+}
+
+.slot.empty {
+  background-color: #f9f9f9;
+  border-style: dashed;
+}
+
+.slot-dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+}
+
+.slot-over {
+  border-color: #4CAF50;
+  background-color: #e8f5e8;
+  border-width: 3px;
 }
 
 .slot img {
   width: 100%;
   max-width: 96px;
   height: auto;
+  pointer-events: none;
 }
 
 .slot p {
   margin: 4px 0 0 0;
   font-size: 12px;
   font-weight: bold;
+  pointer-events: none;
 } 

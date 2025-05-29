@@ -5,7 +5,7 @@ import Box from "./Box.jsx";
 export default function BoxPage() {
   const { boxNumber } = useParams();
   const navigate = useNavigate();
-  const { box, isPending, hasNext, hasPrevious, error } = useBox(boxNumber);
+  const { box, isPending, hasNext, hasPrevious, error, swap } = useBox(boxNumber);
   
   const handlePrevious = () => {
     const prevBoxNumber = parseInt(boxNumber) - 1;
@@ -15,6 +15,10 @@ export default function BoxPage() {
   const handleNext = () => {
     const nextBoxNumber = parseInt(boxNumber) + 1;
     navigate(`/boxes/${nextBoxNumber}`);
+  };
+
+  const handleSwap = (source, target) => {
+    swap(source, target);
   };
   
   return (
@@ -40,7 +44,7 @@ export default function BoxPage() {
       
       {error && <p>{error.message}</p>}
       
-      {box && <Box box={box} />}
+      {box && <Box box={box} onSwap={handleSwap} />}
     </div>
   );
 }
