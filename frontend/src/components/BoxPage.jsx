@@ -23,26 +23,32 @@ export default function BoxPage() {
   
   return (
     <div>
-      <h1>Box #{boxNumber}</h1>
+      <header style={{ textAlign: 'center', marginBottom: '20px', borderBottom: '2px solid #ddd', paddingBottom: '10px' }}>
+        <h1 style={{ color: '#333', fontSize: '2rem', margin: '10px 0' }}>🎮 Wenduo's Pokemon Box Manager</h1>
+      </header>
       
-      <div>
+      <h2 style={{ textAlign: 'center', color: '#666' }}>Box #{boxNumber}</h2>
+      
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <button 
           onClick={handlePrevious} 
           disabled={!hasPrevious}
+          style={{ marginRight: '10px', padding: '8px 16px' }}
         >
           Previous
         </button>
         <button 
           onClick={handleNext} 
           disabled={!hasNext}
+          style={{ padding: '8px 16px' }}
         >
           Next
         </button>
       </div>
       
-      {isPending && <p>Loading</p>}
+      {isPending && <p style={{ textAlign: 'center' }}>Loading</p>}
       
-      {error && <p>{error.message}</p>}
+      {error && <p style={{ textAlign: 'center', color: 'red' }}>{error.message}</p>}
       
       {box && <Box box={box} onSwap={handleSwap} />}
     </div>
